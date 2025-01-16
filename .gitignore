@@ -1,0 +1,16 @@
+# Diretórios padrão do Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Configurações do IntelliJ IDEA
+/.idea/
+/*.iml
+
+# Configurações do Eclipse
+/.classpath
+/.project
+/.settings/
+
+# Configurações do VS Code
+/.vscode/
+
