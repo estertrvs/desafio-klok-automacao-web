@@ -1,0 +1,17 @@
+Pergunta: Quais são os detalhes das apólices de seguro de todos os clientes da "SeguraTudo" que possuem apólices de seguro ativas, incluindo o nome do cliente, número da apólice, tipo de seguro e valor do prêmio? 
+
+Resposta: Para obter os dados das apólices ativas de todos os clientes basta executar a seguinte consulta no banco de dados da empresa:
+
+SELECT 
+    clientes.nome AS nome_cliente,
+    apolices.numero_apolice AS numero_apolice,
+    apolices.tipo_seguro AS tipo_seguro,
+    apolices.valor_premio AS valor_premio
+FROM 
+    clientes
+INNER JOIN 
+    apolices
+ON 
+    clientes.id = apolices.cliente_id
+WHERE 
+    apolices.status = 'ativa';
